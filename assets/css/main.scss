@@ -20,7 +20,9 @@ footer {
 a {
     background: $secondary-color;
     border-radius: 4px;
-    color: $accent-color;
+    // color: $accent-color;
+    color: $primary-color;
+    margin: 0 .125rem;
     padding: .125em .25em;
     text-decoration: none;
 
@@ -98,7 +100,7 @@ nav {
         border-radius: 0;
         border-bottom: 1px solid lighten($primary-color, 50);
         display: block;
-        padding: .5rem 1rem .5rem 2.75rem;
+        padding: .5rem 1rem .5rem 2.75rem;  
     }
 }
 
