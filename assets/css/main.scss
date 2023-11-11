@@ -8,6 +8,7 @@ body {
     background: $secondary-color;
     color: $primary-color;
     font-family: "Source Serif 4", serif;
+    line-height: 2;
     text-rendering: optimizeLegibility;
 }
 
@@ -35,13 +36,15 @@ h4, h5, h6 {
     font-family: "Poiret One", sans-serif;
 }
 
-
 /* Header */
 
 .logo {
     font-family: "Poiret One", sans-serif;
     font-size: 36px;
-    // font-weight: 900;
+
+    a { 
+        display: inline-block;
+    }
 }
 
 /* Navigation */
@@ -50,11 +53,52 @@ nav {
     background: $primary-color;
     color: $secondary-color;
 
-    .page-link {
+    .collapsible-menu {
+        label {
+            cursor: pointer;
+            display: block;
+            padding: 1rem;
+
+            svg {
+                fill: $secondary-color;
+                padding-right: .5rem;
+                vertical-align: middle;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    input {
+        &#main-nav {
+            display: none;
+        }
+
+        &:checked {
+            & + label {
+                // Style for the label once the menu is expanded
+            }
+
+            & ~ .main-nav-content {
+                max-height: 100%;
+            }
+        }
+    }
+
+    .main-nav-content {
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    .menu-item {
         border-radius: 0;
-        border-right: 1px solid $primary-color;
-        display: inline-block;
-        padding: .5rem;
+        border-bottom: 1px solid lighten($primary-color, 50);
+        display: block;
+        padding: .5rem 1rem .5rem 2.75rem;
     }
 }
 
