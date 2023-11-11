@@ -6,14 +6,12 @@
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         {%- if site.author -%}
-          {{ site.author | escape }}
+          Deisgned by {{ site.author | escape }}
         {%- else -%}
-          <a href="{{ site.url }}">{{ site.title | escape }}</a>
+          <a href="{{ site.baseurl }}">{{ site.title | escape }}</a>
         {%- endif -%}
 
-        <p class="small">UI/UX Designer based in London, UK.</p>
-
-        <p><a href="{{ site.url }}accessibility-statement/">Accessibility statement</a>
+        <p><a href="{{ site.baseurl }}accessibility-statement/">Accessibility statement</a>
       </div>
 
       <div class="footer-col footer-col-2">

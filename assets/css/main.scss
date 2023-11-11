@@ -1,3 +1,68 @@
+@import "normalize.css";
+@import "colors.scss";
+@import "fonts.scss";
+
+/* Globals */
+
 body {
-    background: black;
+    background: $secondary-color;
+    color: $primary-color;
+    font-family: "Source Serif 4", serif;
+    text-rendering: optimizeLegibility;
+}
+
+main,
+footer {
+    padding: 1rem;
+}
+
+a {
+    background: $secondary-color;
+    border-radius: 4px;
+    color: $accent-color;
+    padding: .125em .25em;
+    text-decoration: none;
+
+    &:hover {
+        background: $accent-color;
+        color: $light;
+    }
+}
+
+// Headings
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: "Poiret One", sans-serif;
+}
+
+
+/* Header */
+
+.logo {
+    font-family: "Poiret One", sans-serif;
+    font-size: 36px;
+    // font-weight: 900;
+}
+
+/* Navigation */
+
+nav {
+    background: $primary-color;
+    color: $secondary-color;
+
+    .page-link {
+        border-radius: 0;
+        border-right: 1px solid $primary-color;
+        display: inline-block;
+        padding: .5rem;
+    }
+}
+
+/* Main */
+
+/* Footer */
+
+footer {
+    background: $primary-color;
+    color: $secondary-color;
 }
